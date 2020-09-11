@@ -1,0 +1,18 @@
+<RCC>
+    <qresource prefix="/img">
+        <file>image/controls-forward.png</file>
+        <file>image/controls-movie-stop.png</file>
+        <file>image/controls-next.png</file>
+        <file>image/controls-pause.png</file>
+        <file>image/controls-play.png</file>
+        <file>image/controls-previous.png</file>
+        <file>image/controls-record.png</file>
+        <file>image/controls-rewind.png</file>
+        <file>image/controls-stop.png</file>
+        <file>image/volume-control-down-3.png</file>
+        <file>image/volume-control-full.png</file>
+        <file>image/volume-control-off.png</file>
+        <file>image/volume-control-up-2.png</file>
+        <file>image/Ahuri-Nes-Nes-Pad.ico</file>
+    </qresource>
+</RCC>

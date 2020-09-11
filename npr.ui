@@ -1,0 +1,342 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>npr</class>
+ <widget class="QMainWindow" name="npr">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>630</width>
+    <height>469</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>NPR</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="resource.qrc">
+    <normaloff>:/img/image/Ahuri-Nes-Nes-Pad.ico</normaloff>:/img/image/Ahuri-Nes-Nes-Pad.ico</iconset>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QSlider" name="horizontalSlider">
+    <property name="geometry">
+     <rect>
+      <x>60</x>
+      <y>270</y>
+      <width>401</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Horizontal</enum>
+    </property>
+   </widget>
+   <widget class="QSlider" name="verticalSlider">
+    <property name="geometry">
+     <rect>
+      <x>560</x>
+      <y>60</y>
+      <width>16</width>
+      <height>331</height>
+     </rect>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Vertical</enum>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_titre">
+    <property name="geometry">
+     <rect>
+      <x>170</x>
+      <y>93</y>
+      <width>231</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>120</x>
+      <y>150</y>
+      <width>47</width>
+      <height>13</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>--:--</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_2">
+    <property name="geometry">
+     <rect>
+      <x>230</x>
+      <y>170</y>
+      <width>47</width>
+      <height>13</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>--:--</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_3">
+    <property name="geometry">
+     <rect>
+      <x>380</x>
+      <y>130</y>
+      <width>47</width>
+      <height>13</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Arial</family>
+      <pointsize>14</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>630</width>
+     <height>19</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true"/>
+   </property>
+   <widget class="QMenu" name="menuFichier">
+    <property name="title">
+     <string>Fichier</string>
+    </property>
+    <addaction name="actionOuvrir"/>
+    <addaction name="actionNext"/>
+    <addaction name="actionPrev"/>
+    <addaction name="actionPause"/>
+    <addaction name="actionPlay"/>
+    <addaction name="actionStop"/>
+    <addaction name="actionQuitter"/>
+   </widget>
+   <widget class="QMenu" name="menuInformation">
+    <property name="title">
+     <string>Information</string>
+    </property>
+    <addaction name="actionNPR"/>
+    <addaction name="actionRABARISON_Heriniaina"/>
+   </widget>
+   <widget class="QMenu" name="menuAide">
+    <property name="title">
+     <string>Aide</string>
+    </property>
+   </widget>
+   <widget class="QMenu" name="menuVolume">
+    <property name="title">
+     <string>Volume</string>
+    </property>
+    <addaction name="actionMute"/>
+    <addaction name="actionAugmenter"/>
+    <addaction name="actionDiminuer"/>
+    <addaction name="actionNormal"/>
+   </widget>
+   <addaction name="menuFichier"/>
+   <addaction name="menuInformation"/>
+   <addaction name="menuVolume"/>
+   <addaction name="menuAide"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar">
+   <property name="acceptDrops">
+    <bool>true</bool>
+   </property>
+   <property name="styleSheet">
+    <string notr="true"/>
+   </property>
+  </widget>
+  <widget class="QToolBar" name="toolBar">
+   <property name="windowTitle">
+    <string>toolBar</string>
+   </property>
+   <property name="styleSheet">
+    <string notr="true"/>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="actionOuvrir"/>
+   <addaction name="separator"/>
+   <addaction name="actionStop"/>
+   <addaction name="separator"/>
+   <addaction name="actionPrev"/>
+   <addaction name="actionPause"/>
+   <addaction name="actionPlay"/>
+   <addaction name="actionNext"/>
+   <addaction name="separator"/>
+   <addaction name="actionNormal"/>
+   <addaction name="actionDiminuer"/>
+   <addaction name="actionAugmenter"/>
+   <addaction name="actionMute"/>
+  </widget>
+  <action name="actionOuvrir">
+   <property name="icon">
+    <iconset resource="resource.qrc">
+     <normaloff>:/img/image/controls-movie-stop.png</normaloff>:/img/image/controls-movie-stop.png</iconset>
+   </property>
+   <property name="text">
+    <string>Ouvrir</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Shift+N</string>
+   </property>
+  </action>
+  <action name="actionNext">
+   <property name="icon">
+    <iconset resource="resource.qrc">
+     <normaloff>:/img/image/controls-next.png</normaloff>:/img/image/controls-next.png</iconset>
+   </property>
+   <property name="text">
+    <string>Avancer</string>
+   </property>
+   <property name="toolTip">
+    <string>Avancer</string>
+   </property>
+   <property name="shortcut">
+    <string>Right</string>
+   </property>
+  </action>
+  <action name="actionPrev">
+   <property name="icon">
+    <iconset resource="resource.qrc">
+     <normaloff>:/img/image/controls-previous.png</normaloff>:/img/image/controls-previous.png</iconset>
+   </property>
+   <property name="text">
+    <string>Reculer</string>
+   </property>
+   <property name="toolTip">
+    <string>Reculer</string>
+   </property>
+   <property name="shortcut">
+    <string>Left</string>
+   </property>
+  </action>
+  <action name="actionPause">
+   <property name="icon">
+    <iconset resource="resource.qrc">
+     <normaloff>:/img/image/controls-pause.png</normaloff>:/img/image/controls-pause.png</iconset>
+   </property>
+   <property name="text">
+    <string>Pause</string>
+   </property>
+   <property name="shortcut">
+    <string>Space</string>
+   </property>
+  </action>
+  <action name="actionPlay">
+   <property name="icon">
+    <iconset resource="resource.qrc">
+     <normaloff>:/img/image/controls-play.png</normaloff>:/img/image/controls-play.png</iconset>
+   </property>
+   <property name="text">
+    <string>Play</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Space</string>
+   </property>
+  </action>
+  <action name="actionStop">
+   <property name="icon">
+    <iconset resource="resource.qrc">
+     <normaloff>:/img/image/controls-stop.png</normaloff>:/img/image/controls-stop.png</iconset>
+   </property>
+   <property name="text">
+    <string>Stop</string>
+   </property>
+   <property name="shortcut">
+    <string>S</string>
+   </property>
+  </action>
+  <action name="actionNPR">
+   <property name="text">
+    <string>NPR</string>
+   </property>
+  </action>
+  <action name="actionRABARISON_Heriniaina">
+   <property name="text">
+    <string>RABARISON Heriniaina</string>
+   </property>
+  </action>
+  <action name="actionMute">
+   <property name="icon">
+    <iconset resource="resource.qrc">
+     <normaloff>:/img/image/volume-control-off.png</normaloff>:/img/image/volume-control-off.png</iconset>
+   </property>
+   <property name="text">
+    <string>Mute</string>
+   </property>
+   <property name="shortcut">
+    <string>M</string>
+   </property>
+  </action>
+  <action name="actionAugmenter">
+   <property name="icon">
+    <iconset resource="resource.qrc">
+     <normaloff>:/img/image/volume-control-up-2.png</normaloff>:/img/image/volume-control-up-2.png</iconset>
+   </property>
+   <property name="text">
+    <string>Augmenter</string>
+   </property>
+   <property name="shortcut">
+    <string>Up</string>
+   </property>
+  </action>
+  <action name="actionDiminuer">
+   <property name="icon">
+    <iconset resource="resource.qrc">
+     <normaloff>:/img/image/volume-control-down-3.png</normaloff>:/img/image/volume-control-down-3.png</iconset>
+   </property>
+   <property name="text">
+    <string>Diminuer</string>
+   </property>
+   <property name="shortcut">
+    <string>Down</string>
+   </property>
+  </action>
+  <action name="actionNormal">
+   <property name="icon">
+    <iconset resource="resource.qrc">
+     <normaloff>:/img/image/volume-control-full.png</normaloff>:/img/image/volume-control-full.png</iconset>
+   </property>
+   <property name="text">
+    <string>Normal</string>
+   </property>
+   <property name="shortcut">
+    <string>N</string>
+   </property>
+  </action>
+  <action name="actionQuitter">
+   <property name="text">
+    <string>Quitter</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Q</string>
+   </property>
+  </action>
+ </widget>
+ <resources>
+  <include location="resource.qrc"/>
+ </resources>
+ <connections/>
+</ui>
